@@ -42,7 +42,30 @@ namespace DiceGame
                 {
                     Console.WriteLine("This round is a draw!");
                 }
+                Console.WriteLine($"The score is now - You : {playerPoints}. Rival : {rivalPoints}.");
+                Console.Write("Press any key to continue...");
+                Console.ReadKey(true);
+                Console.WriteLine();
+                Console.WriteLine();
             }
+            Console.WriteLine("Game over.");
+            Console.WriteLine($"The score is now - You : {playerPoints}. Rival : {rivalPoints}.");
+            if (playerPoints > rivalPoints)
+            {
+                Console.WriteLine("You won!");
+            }
+            else if (playerPoints < rivalPoints)
+            {
+                Console.WriteLine("You Lost!");
+            }
+            else
+            {
+                Console.WriteLine("This game is a draw.");
+            }
+            Console.Write("Press any key to exit...");
+            Console.ReadKey(true);
+            Console.Clear();
+            Console.WriteLine("Dice Game was closed.");
         }
     }
 }
